@@ -24,9 +24,9 @@ app.use(cors({
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
-app.use('/users', userRoutes);
-app.use('/auth', authRoutes);
-app.use('/course', courseRoutes);
-app.use('/enrollments', enrollmentRoutes);
+app.use('/expenses/users', userRoutes);
+app.use('/expenses/auth', authRoutes);
+app.use('/expenses/course', courseRoutes);
+app.use('/expenses/enrollments', enrollmentRoutes);
 
 module.exports = app;
