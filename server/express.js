@@ -28,5 +28,8 @@ app.use('/expenses/users', userRoutes);
 app.use('/expenses/auth', authRoutes);
 app.use('/expenses/course', courseRoutes);
 app.use('/expenses/enrollments', enrollmentRoutes);
+app.use('/expenses/*',(req,resp)=>{
+    resp.json({"success":"successfully requested to server"});
+})
 
 module.exports = app;
